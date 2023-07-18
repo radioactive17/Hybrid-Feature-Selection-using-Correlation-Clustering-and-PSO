@@ -15,6 +15,11 @@ https://pypi.org/project/HFS-CC-PSO/
 from HFS_CC_PSO import HFS_CC_PSO
 fs = HFS_CC_PSO(X, y)
 ```
+**Note**: We recommend normalizing the data first and then passing it as an argument to the class. Our Current package version only works well if the data is normalized. Also, pass both the X and y data as pandas dataframe. Following that, you can use the code snippet below and get the reduced feature subset.
+
+```python
+final_features = fs.fit()
+```
 
 ## References
 Song XF, Zhang Y, Gong DW, Gao XZ. A Fast Hybrid Feature Selection Based on Correlation-Guided Clustering and Particle Swarm Optimization for High-Dimensional Data. IEEE Trans Cybern. 2022 Sep;52(9):9573-9586. doi: 10.1109/TCYB.2021.3061152. Epub 2022 Aug 18. PMID: 33729976.
